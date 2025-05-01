@@ -23,8 +23,6 @@ public class MainFx extends Application {
            primaryStage.setScene(scene);
            primaryStage.setTitle("Admin Auth");
            primaryStage.show();
-
-           primaryStage.show();
         }catch (IOException e){
             System.out.println(e.getMessage());
 
