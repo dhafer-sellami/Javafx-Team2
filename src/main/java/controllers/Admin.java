@@ -122,10 +122,12 @@ public class Admin implements Initializable {
                     alert.successMessage("Login Successfully!");
 
                     // LINK MAIN FORM FOR ADMIN
-                    Parent root = FXMLLoader.load(getClass().getResource("AdminMainForm.fxml"));
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/AdminMainForm.fxml"));
+                    Parent root = loader.load();
+//                    Parent root = FXMLLoader.load(getClass().getResource("AdminMainForm.fxml"));
                     Stage stage = new Stage();
 
-                    stage.setTitle("Hospital Management System | Admin Portal");
+                    stage.setTitle("MediTrack System | Admin Portal");
                     stage.setScene(new Scene(root));
                     stage.show();
 
