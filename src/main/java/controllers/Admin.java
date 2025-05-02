@@ -26,7 +26,7 @@ import java.util.ResourceBundle;
 
 public class Admin implements Initializable {
 
-    // LETS NAME ALL COMPONENTS WE HAVE ON ADMIN PAGE
+
     @FXML
     private AnchorPane main_form;
 
@@ -78,6 +78,7 @@ public class Admin implements Initializable {
     @FXML
     private Hyperlink register_loginHere;
 
+    //    DATABASE TOOLS
     private Connection connect;
     private PreparedStatement prepare;
     private ResultSet result;
@@ -121,10 +122,9 @@ public class Admin implements Initializable {
                     // IF CORRECT USERNAME AND PASSWORD
                     alert.successMessage("Login Successfully!");
 
-                    // LINK MAIN FORM FOR ADMIN
+
                     FXMLLoader loader = new FXMLLoader(getClass().getResource("/AdminMainForm.fxml"));
                     Parent root = loader.load();
-//                    Parent root = FXMLLoader.load(getClass().getResource("AdminMainForm.fxml"));
                     Stage stage = new Stage();
 
                     stage.setTitle("MediTrack System | Admin Portal");
@@ -260,7 +260,7 @@ public void registerAccount() {
     }
 
     @FXML
-    public void switchPage() {
+    public void switchPage(ActionEvent event) {
 
         if (login_user.getSelectionModel().getSelectedItem() == "Admin Portal") {
 

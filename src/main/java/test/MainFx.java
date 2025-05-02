@@ -21,7 +21,7 @@ public class MainFx extends Application {
             Parent root = loader.load();
            Scene scene = new Scene(root);
            primaryStage.setScene(scene);
-           primaryStage.setTitle("Admin Auth");
+           primaryStage.setTitle("MediTrack Desktop System");
            primaryStage.show();
         }catch (IOException e){
             System.out.println(e.getMessage());

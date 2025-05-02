@@ -63,7 +63,7 @@
                   </AnchorPane>
                </top>
                <left>
-                  <AnchorPane prefHeight="560.0" prefWidth="214.0" styleClass="bg-color-2" stylesheets="design/DoctorMainFormDesign.css" BorderPane.alignment="CENTER">
+                  <AnchorPane prefHeight="560.0" prefWidth="214.0" styleClass="bg-color-2" stylesheets="@design/DoctorMainFormDesign.css" BorderPane.alignment="CENTER">
                      <children>
                         <FontAwesomeIconView fill="WHITE" glyphName="USER" layoutX="83.0" layoutY="65.0" size="5em" />
                         <Label layoutX="23.0" layoutY="85.0" text="Doctor ID:" textFill="WHITE" />

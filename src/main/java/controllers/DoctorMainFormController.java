@@ -7,6 +7,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
@@ -42,173 +43,259 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 public class DoctorMainFormController implements Initializable {
-    @javafx.fxml.FXML
-    private Label dashboard_tA;
-    @javafx.fxml.FXML
-    private TextField appointment_appointmentID;
-    @javafx.fxml.FXML
-    private Button appointment_insertBtn;
-    @javafx.fxml.FXML
-    private Label patients_PI_mobileNumber;
-    @javafx.fxml.FXML
-    private AreaChart dashboad_chart_PD;
-    @javafx.fxml.FXML
-    private TextField appointment_mobileNumber;
-    @javafx.fxml.FXML
+    @FXML
     private AnchorPane main_form;
-    @javafx.fxml.FXML
-    private BarChart dashboad_chart_DD;
-    @javafx.fxml.FXML
-    private Button appointments_btn;
-    @javafx.fxml.FXML
-    private Circle profile_circleImage;
-    @javafx.fxml.FXML
-    private TextField profile_name;
-    @javafx.fxml.FXML
-    private Label date_time;
-    @javafx.fxml.FXML
-    private TextArea profile_address;
-    @javafx.fxml.FXML
-    private TableColumn appointments_col_dateModify;
-    @javafx.fxml.FXML
-    private Label nav_username;
-    @javafx.fxml.FXML
-    private TextField profile_email;
-    @javafx.fxml.FXML
-    private TableColumn appointments_col_appointmentID;
-    @javafx.fxml.FXML
-    private TableColumn appointments_col_dateDelete;
-    @javafx.fxml.FXML
-    private DatePicker appointment_schedule;
-    @javafx.fxml.FXML
-    private TableColumn dashboad_col_name;
-    @javafx.fxml.FXML
-    private AnchorPane dashboard_form;
-    @javafx.fxml.FXML
-    private Label patients_PA_patientID;
-    @javafx.fxml.FXML
-    private TextField patients_password;
-    @javafx.fxml.FXML
-    private TextField patients_mobileNumber;
-    @javafx.fxml.FXML
-    private TableView appointments_tableView;
-    @javafx.fxml.FXML
-    private Label patients_PA_dateCreated;
-    @javafx.fxml.FXML
-    private Button appointment_clearBtn;
-    @javafx.fxml.FXML
-    private TableColumn appointments_col_gender;
-    @javafx.fxml.FXML
-    private TableColumn dashboad_col_appointmentID;
-    @javafx.fxml.FXML
-    private Label patients_PA_password;
-    @javafx.fxml.FXML
-    private Label profile_label_email;
-    @javafx.fxml.FXML
+
+    @FXML
     private Circle top_profile;
-    @javafx.fxml.FXML
-    private TextField appointment_description;
-    @javafx.fxml.FXML
-    private TextField profile_doctorID;
-    @javafx.fxml.FXML
-    private TableColumn appointments_col_status;
-    @javafx.fxml.FXML
-    private TextField appointment_treatment;
-    @javafx.fxml.FXML
-    private ComboBox patients_gender;
-    @javafx.fxml.FXML
-    private TableColumn dashboad_col_appointmentDate;
-    @javafx.fxml.FXML
-    private ComboBox appointment_status;
-    @javafx.fxml.FXML
-    private ComboBox profile_gender;
-    @javafx.fxml.FXML
-    private Label patients_PI_gender;
-    @javafx.fxml.FXML
-    private Label nav_adminID;
-    @javafx.fxml.FXML
-    private AnchorPane patients_form;
-    @javafx.fxml.FXML
-    private Button patients_PI_recordBtn;
-    @javafx.fxml.FXML
-    private Label current_form;
-    @javafx.fxml.FXML
-    private TableView dashboad_tableView;
-    @javafx.fxml.FXML
-    private ComboBox profile_specialized;
-    @javafx.fxml.FXML
-    private Label profile_label_name;
-    @javafx.fxml.FXML
-    private TextField profile_mobileNumber;
-    @javafx.fxml.FXML
-    private Button appointment_updateBtn;
-    @javafx.fxml.FXML
-    private ComboBox profile_status;
-    @javafx.fxml.FXML
-    private TableColumn appointments_col_date;
-    @javafx.fxml.FXML
-    private TextField appointment_diagnosis;
-    @javafx.fxml.FXML
-    private TableColumn appointments_col_description;
-    @javafx.fxml.FXML
+
+    @FXML
     private Label top_username;
-    @javafx.fxml.FXML
-    private Button appointment_deleteBtn;
-    @javafx.fxml.FXML
-    private Button profile_btn;
-    @javafx.fxml.FXML
-    private Button patients_btn;
-    @javafx.fxml.FXML
-    private Label patients_PI_address;
-    @javafx.fxml.FXML
-    private Label dashboard_TP;
-    @javafx.fxml.FXML
-    private Button patients_PI_addBtn;
-    @javafx.fxml.FXML
-    private Label profile_label_dateCreated;
-    @javafx.fxml.FXML
-    private TableColumn dashboad_col_description;
-    @javafx.fxml.FXML
-    private Button profile_importBtn;
-    @javafx.fxml.FXML
-    private Label dashboard_AP;
-    @javafx.fxml.FXML
-    private AnchorPane appointments_form;
-    @javafx.fxml.FXML
-    private TextArea appointment_address;
-    @javafx.fxml.FXML
-    private TextField appointment_name;
-    @javafx.fxml.FXML
-    private TableColumn dashboad_col_status;
-    @javafx.fxml.FXML
-    private Button dashboard_btn;
-    @javafx.fxml.FXML
-    private Label dashboard_IP;
-    @javafx.fxml.FXML
+
+    @FXML
     private Button logout_btn;
-    @javafx.fxml.FXML
-    private ComboBox appointment_gender;
-    @javafx.fxml.FXML
-    private TextField patients_patientName;
-    @javafx.fxml.FXML
-    private TableColumn appointments_col_contactNumber;
-    @javafx.fxml.FXML
-    private Label profile_label_doctorID;
-    @javafx.fxml.FXML
-    private Button patients_confirmBtn;
-    @javafx.fxml.FXML
-    private AnchorPane profile_form;
-    @javafx.fxml.FXML
-    private Label patients_PI_patientName;
-    @javafx.fxml.FXML
+
+    @FXML
+    private Label date_time;
+
+    @FXML
+    private Label current_form;
+
+    @FXML
+    private Label nav_adminID;
+
+    @FXML
+    private Label nav_username;
+
+    @FXML
+    private Button dashboard_btn;
+
+    @FXML
+    private Button patients_btn;
+
+    @FXML
+    private Button appointments_btn;
+
+    @FXML
+    private Button profile_btn;
+
+    @FXML
+    private AnchorPane dashboard_form;
+
+    @FXML
+    private Label dashboard_IP;
+
+    @FXML
+    private Label dashboard_TP;
+
+    @FXML
+    private Label dashboard_AP;
+
+    @FXML
+    private Label dashboard_tA;
+
+    @FXML
+    private AreaChart<?, ?> dashboad_chart_PD;
+
+    @FXML
+    private BarChart<?, ?> dashboad_chart_DD;
+
+    @FXML
+    private TableView<AppointmentData> dashboad_tableView;
+
+    @FXML
+    private TableColumn<AppointmentData, String> dashboad_col_appointmentID;
+
+    @FXML
+    private TableColumn<AppointmentData, String> dashboad_col_name;
+
+    @FXML
+    private TableColumn<AppointmentData, String> dashboad_col_description;
+
+    @FXML
+    private TableColumn<AppointmentData, String> dashboad_col_appointmentDate;
+
+    @FXML
+    private TableColumn<AppointmentData, String> dashboad_col_status;
+
+    @FXML
+    private AnchorPane patients_form;
+
+    @FXML
     private TextField patients_patientID;
-    @javafx.fxml.FXML
-    private TableColumn appointments_col_name;
-    @javafx.fxml.FXML
+
+    @FXML
+    private TextField patients_patientName;
+
+    @FXML
+    private TextField patients_mobileNumber;
+
+    @FXML
+    private TextField patients_password;
+
+    @FXML
     private TextArea patients_address;
-    @javafx.fxml.FXML
+
+    @FXML
+    private Button patients_confirmBtn;
+
+    @FXML
+    private Label patients_PA_patientID;
+
+    @FXML
+    private Label patients_PA_password;
+
+    @FXML
+    private Label patients_PA_dateCreated;
+
+    @FXML
+    private Label patients_PI_patientName;
+
+    @FXML
+    private Label patients_PI_gender;
+
+    @FXML
+    private Label patients_PI_mobileNumber;
+
+    @FXML
+    private Label patients_PI_address;
+
+    @FXML
+    private Button patients_PI_addBtn;
+
+    @FXML
+    private Button patients_PI_recordBtn;
+
+    @FXML
+    private AnchorPane appointments_form;
+
+    @FXML
+    private TableView<AppointmentData> appointments_tableView;
+
+    @FXML
+    private TableColumn<AppointmentData, String> appointments_col_appointmentID;
+
+    @FXML
+    private TableColumn<AppointmentData, String> appointments_col_name;
+
+    @FXML
+    private TableColumn<AppointmentData, String> appointments_col_gender;
+
+    @FXML
+    private TableColumn<AppointmentData, String> appointments_col_contactNumber;
+
+    @FXML
+    private TableColumn<AppointmentData, String> appointments_col_description;
+
+    @FXML
+    private TableColumn<AppointmentData, String> appointments_col_date;
+
+    @FXML
+    private TableColumn<AppointmentData, String> appointments_col_dateModify;
+
+    @FXML
+    private TableColumn<AppointmentData, String> appointments_col_dateDelete;
+
+    @FXML
+    private TableColumn<AppointmentData, String> appointments_col_status;
+
+    @FXML
+    private TableColumn<AppointmentData, String> appointments_col_action;
+
+    @FXML
+    private TextField appointment_appointmentID;
+
+    @FXML
+    private TextField appointment_name;
+
+    @FXML
+    private ComboBox<String> appointment_gender;
+
+    @FXML
+    private TextField appointment_description;
+
+    @FXML
+    private TextField appointment_diagnosis;
+
+    @FXML
+    private TextField appointment_treatment;
+
+    @FXML
+    private TextField appointment_mobileNumber;
+
+    @FXML
+    private TextArea appointment_address;
+
+    @FXML
+    private ComboBox<String> appointment_status;
+
+    @FXML
+    private DatePicker appointment_schedule;
+
+    @FXML
+    private Button appointment_insertBtn;
+
+    @FXML
+    private Button appointment_updateBtn;
+
+    @FXML
+    private Button appointment_clearBtn;
+
+    @FXML
+    private Button appointment_deleteBtn;
+
+    @FXML
+    private ComboBox<String> patients_gender;
+
+    @FXML
+    private AnchorPane profile_form;
+
+    @FXML
+    private Circle profile_circleImage;
+
+    @FXML
+    private Button profile_importBtn;
+
+    @FXML
+    private Label profile_label_doctorID;
+
+    @FXML
+    private Label profile_label_name;
+
+    @FXML
+    private Label profile_label_email;
+
+    @FXML
+    private Label profile_label_dateCreated;
+
+    @FXML
+    private TextField profile_doctorID;
+
+    @FXML
+    private TextField profile_name;
+
+    @FXML
+    private TextField profile_email;
+
+    @FXML
+    private ComboBox<String> profile_gender;
+
+    @FXML
+    private TextField profile_mobileNumber;
+
+    @FXML
+    private TextArea profile_address;
+
+    @FXML
+    private ComboBox<String> profile_specialized;
+
+    @FXML
+    private ComboBox<String> profile_status;
+
+    @FXML
     private Button profile_updateBtn;
 
+    //    DATABASE TOOLSs
     private Connection connect;
     private PreparedStatement prepare;
     private Statement statement;
@@ -479,8 +566,8 @@ public class DoctorMainFormController implements Initializable {
 
     public void patientRecordBtn() {
         try {
-            // LINK THE NAME OF YOUR FXML FOR RECORD PAGE
-            Parent root = FXMLLoader.load(getClass().getResource("RecordPageForm.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/RecordPageForm.fxml"));
+            Parent root = loader.load();
             Stage stage = new Stage();
 
             stage.setTitle("Hospital Management System | Record of Patients");
@@ -680,7 +767,7 @@ public class DoctorMainFormController implements Initializable {
 
     }
 
-    // TO CLEAR ALL FIELDS
+    @javafx.fxml.FXML
     public void appointmentClearBtn() {
         appointment_appointmentID.clear();
         appointment_name.clear();
@@ -1053,7 +1140,7 @@ public class DoctorMainFormController implements Initializable {
         top_username.setText(name);
 
     }
-
+    @javafx.fxml.FXML
     public void switchForm(ActionEvent event) {
         if (event.getSource() == dashboard_btn) {
             dashboard_form.setVisible(true);

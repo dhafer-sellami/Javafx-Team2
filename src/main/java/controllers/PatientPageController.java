@@ -63,7 +63,6 @@ public class PatientPageController implements Initializable {
     private ResultSet result;
 
     private AlertMessage alert = new AlertMessage();
-// NOW, LETS CREATE OUR MAIN FORM 
 
     @FXML
     void loginAccount(ActionEvent event) {
@@ -176,7 +175,8 @@ public class PatientPageController implements Initializable {
 
             try {
 
-                Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/Admin.fxml"));
+                Parent root = loader.load();
                 Stage stage = new Stage();
 
                 stage.setTitle("Hospital Management System");
@@ -195,7 +195,8 @@ public class PatientPageController implements Initializable {
 
             try {
 
-                Parent root = FXMLLoader.load(getClass().getResource("DoctorPage.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/DoctorPage.fxml"));
+                Parent root = loader.load();;
                 Stage stage = new Stage();
 
                 stage.setTitle("Hospital Management System");
@@ -214,7 +215,8 @@ public class PatientPageController implements Initializable {
 
             try {
 
-                Parent root = FXMLLoader.load(getClass().getResource("PatientPage.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/PatientPage.fxml"));
+                Parent root = loader.load();
                 Stage stage = new Stage();
 
                 stage.setTitle("Hospital Management System");
