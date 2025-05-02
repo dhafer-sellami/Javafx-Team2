@@ -200,9 +200,6 @@ public class DoctorMainFormController implements Initializable {
     private TableColumn<AppointmentData, String> appointments_col_status;
 
     @FXML
-    private TableColumn<AppointmentData, String> appointments_col_action;
-
-    @FXML
     private TextField appointment_appointmentID;
 
     @FXML
@@ -470,6 +467,7 @@ public class DoctorMainFormController implements Initializable {
 
     }
 
+    @FXML
     public void patientConfirmBtn() {
 
         // CHECK IF SOME OR ALL FIELDS ARE EMPTY
@@ -498,6 +496,7 @@ public class DoctorMainFormController implements Initializable {
 
     }
 
+    @FXML
     public void patientAddBtn() {
 
         if (patients_PA_patientID.getText().isEmpty()
@@ -564,13 +563,14 @@ public class DoctorMainFormController implements Initializable {
         }
     }
 
+    @FXML
     public void patientRecordBtn() {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/RecordPageForm.fxml"));
             Parent root = loader.load();
             Stage stage = new Stage();
 
-            stage.setTitle("Hospital Management System | Record of Patients");
+            stage.setTitle("MediTrack Management System | Record of Patients");
             stage.setScene(new Scene(root));
             stage.show();
 
@@ -611,6 +611,7 @@ public class DoctorMainFormController implements Initializable {
 
     }
 
+    @FXML
     public void appointmentInsertBtn() {
 
 //        CHECK IF THE FIELD(S) ARE EMPTY
@@ -684,6 +685,7 @@ public class DoctorMainFormController implements Initializable {
 
     }
 
+    @FXML
     public void appointmentUpdateBtn() {
 
         if (appointment_appointmentID.getText().isEmpty()
@@ -729,6 +731,7 @@ public class DoctorMainFormController implements Initializable {
         }
     }
 
+    @FXML
     public void appointmentDeleteBtn() {
 
         if (appointment_appointmentID.getText().isEmpty()) {
@@ -894,6 +897,7 @@ public class DoctorMainFormController implements Initializable {
     }
 // TO SELECT THE DATA PER ROW IN THE TABLE
 
+    @FXML
     public void appointmentSelect() {
 
         AppointmentData appData = (AppointmentData) appointments_tableView.getSelectionModel().getSelectedItem();
@@ -915,6 +919,7 @@ public class DoctorMainFormController implements Initializable {
 
     }
 
+    @FXML
     public void profileUpdateBtn() {
 
         connect = Database.connectDB();
@@ -997,6 +1002,7 @@ public class DoctorMainFormController implements Initializable {
         }
     }
 
+    @FXML
     public void profileChangeProfile() {
 
         FileChooser open = new FileChooser();
@@ -1165,6 +1171,7 @@ public class DoctorMainFormController implements Initializable {
         }
     }
 
+    @FXML
     public void logoutBtn() {
 
         try {

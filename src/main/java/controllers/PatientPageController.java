@@ -119,8 +119,8 @@ public class PatientPageController implements Initializable {
                         Data.patient_id = Integer.parseInt(login_patientID.getText());
                         
                         alert.successMessage("Login Successfully!");
-                        // LINK YOUR PATIENT MAIN FORM
-                        Parent root = FXMLLoader.load(getClass().getResource("PatientMainForm.fxml"));
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("/PatientMainForm.fxml"));
+                        Parent root = loader.load();
                         Stage stage = new Stage();
 
                         stage.setScene(new Scene(root));
@@ -179,7 +179,7 @@ public class PatientPageController implements Initializable {
                 Parent root = loader.load();
                 Stage stage = new Stage();
 
-                stage.setTitle("Hospital Management System");
+                stage.setTitle("MediTrack Management System");
 
                 stage.setMinWidth(340);
                 stage.setMinHeight(580);
@@ -199,7 +199,7 @@ public class PatientPageController implements Initializable {
                 Parent root = loader.load();;
                 Stage stage = new Stage();
 
-                stage.setTitle("Hospital Management System");
+                stage.setTitle("MediTrack Management System");
 
                 stage.setMinWidth(340);
                 stage.setMinHeight(580);
@@ -219,7 +219,7 @@ public class PatientPageController implements Initializable {
                 Parent root = loader.load();
                 Stage stage = new Stage();
 
-                stage.setTitle("Hospital Management System");
+                stage.setTitle("MediTrack Management System");
 
                 stage.setMinWidth(340);
                 stage.setMinHeight(580);

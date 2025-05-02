@@ -134,11 +134,11 @@ public class DoctorPageController implements Initializable {
 
                         alert.successMessage("Login Successfully!");
 
-                        // LINK YOUR DOCTOR MAIN FORM
-                        Parent root = FXMLLoader.load(getClass().getResource("DoctorMainForm.fxml"));
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("/DoctorMainForm.fxm"));
+                        Parent root = loader.load();
                         Stage stage = new Stage();
 
-                        stage.setTitle("Hospital Management System | Doctor Main Form");
+                        stage.setTitle("MediTrack Management System | Doctor Main Form");
                         stage.setScene(new Scene(root));
                         stage.show();
 
@@ -293,7 +293,7 @@ public class DoctorPageController implements Initializable {
                 Parent root = loader.load();
                 Stage stage = new Stage();
 
-                stage.setTitle("Hospital Management System");
+                stage.setTitle("MediTrack Management System");
 
                 stage.setMinWidth(340);
                 stage.setMinHeight(580);
@@ -313,7 +313,7 @@ public class DoctorPageController implements Initializable {
 
                 Stage stage = new Stage();
 
-                stage.setTitle("Hospital Management System");
+                stage.setTitle("MediTrack Management System");
 
                 stage.setMinWidth(340);
                 stage.setMinHeight(580);
@@ -332,7 +332,7 @@ public class DoctorPageController implements Initializable {
                 Parent root = loader.load();
                 Stage stage = new Stage();
 
-                stage.setTitle("Hospital Management System");
+                stage.setTitle("MediTrack Management System");
 
                 stage.setMinWidth(340);
                 stage.setMinHeight(580);
@@ -350,6 +350,7 @@ public class DoctorPageController implements Initializable {
 
     }
 
+
     @javafx.fxml.FXML
     void registerShowPassword() {
 
@@ -364,6 +365,14 @@ public class DoctorPageController implements Initializable {
         }
 
     }
+
+//    @javafx.fxml.FXML
+//    public void registerClear() {
+//        register_email.clear();
+//        register_fullName.clear();
+//        register_password.clear();
+//        register_showPassword.clear();
+//    }
 
     @javafx.fxml.FXML
     void switchForm(ActionEvent event) {

@@ -634,8 +634,8 @@ public class AdminMainFormController implements Initializable {
                                 Data.temp_doctorStatus = pData.getStatus();
                                 Data.temp_doctorImagePath = pData.getImage();
 
-                                // NOW LETS CREATE FXML FOR EDIT PATIENT FORM
-                                Parent root = FXMLLoader.load(getClass().getResource("EditDoctorForm.fxml"));
+                                FXMLLoader loader = new FXMLLoader(getClass().getResource("/EditDoctorForm.fxml"));
+                                Parent root = loader.load();
                                 Stage stage = new Stage();
 
                                 stage.setScene(new Scene(root));
@@ -797,8 +797,8 @@ public class AdminMainFormController implements Initializable {
                                 Data.temp_number = pData.getMobileNumber();
                                 Data.temp_status = pData.getStatus();
 
-                                // NOW LETS CREATE FXML FOR EDIT PATIENT FORM
-                                Parent root = FXMLLoader.load(getClass().getResource("EditPatientForm.fxml"));
+                                FXMLLoader loader = new FXMLLoader(getClass().getResource("/EditPatientForm.fxml"));
+                                Parent root = loader.load();
                                 Stage stage = new Stage();
 
                                 stage.setScene(new Scene(root));
@@ -960,8 +960,8 @@ public class AdminMainFormController implements Initializable {
                                 Data.temp_appSpecialized = aData.getSpecialized();
                                 Data.temp_appStatus = aData.getStatus();
 
-                                // NOW LETS CREATE FXML FOR EDIT APPOINTMENT FORM
-                                Parent root = FXMLLoader.load(getClass().getResource("EditAppointmentForm.fxml"));
+                                FXMLLoader loader = new FXMLLoader(getClass().getResource("/EditAppointmentForm.fxml"));
+                                Parent root = loader.load() ;
                                 Stage stage = new Stage();
 
                                 stage.setScene(new Scene(root));
@@ -1097,7 +1097,8 @@ public class AdminMainFormController implements Initializable {
     public void paymentCheckOutBtn() {
 
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("/CheckOutPatient.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/CheckOutPatient.fxml"));
+            Parent root = loader.load();
             Stage stage = new Stage();
 
             stage.setTitle("Hospital Management System | Check-Out");
@@ -1366,7 +1367,8 @@ public class AdminMainFormController implements Initializable {
 
         try {
             if (alert.confirmationMessage("Are you sure you want to logout?")) {
-                Parent root = FXMLLoader.load(getClass().getResource("/Admin.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/Admin.fxml"));
+                Parent root = loader.load();
                 Stage stage = new Stage();
 
                 stage.setScene(new Scene(root));
