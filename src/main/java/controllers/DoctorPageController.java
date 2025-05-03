@@ -134,7 +134,7 @@ public class DoctorPageController implements Initializable {
 
                         alert.successMessage("Login Successfully!");
 
-                        FXMLLoader loader = new FXMLLoader(getClass().getResource("/DoctorMainForm.fxm"));
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("/DoctorMainForm.fxml"));
                         Parent root = loader.load();
                         Stage stage = new Stage();
 
@@ -239,6 +239,11 @@ public class DoctorPageController implements Initializable {
                     prepare.executeUpdate();
 
                     alert.successMessage("Registered Succesfully!");
+                    registerClear();
+
+                    // TO SWITCH THE FORM INTO LOGIN FORM
+                    login_form.setVisible(true);
+                    register_form.setVisible(false);
 
                 }
 
@@ -248,6 +253,14 @@ public class DoctorPageController implements Initializable {
 
         }
 
+    }
+
+    public void registerClear() {
+        register_email.clear();
+        register_fullName.clear();
+        register_password.clear();
+        register_doctorID.clear();
+        register_showPassword.clear();
     }
 
     @javafx.fxml.FXML

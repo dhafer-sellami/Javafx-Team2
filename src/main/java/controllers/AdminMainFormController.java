@@ -1068,7 +1068,7 @@ public class AdminMainFormController implements Initializable {
     @FXML
     public void paymentSelectItems() {
 
-        PatientsData pData = (PatientsData) payment_tableView.getSelectionModel().getSelectedItem();
+        PatientsData pData = payment_tableView.getSelectionModel().getSelectedItem();
         int num = payment_tableView.getSelectionModel().getSelectedIndex();
 
         if ((num - 1) < -1) {
@@ -1101,7 +1101,7 @@ public class AdminMainFormController implements Initializable {
             Parent root = loader.load();
             Stage stage = new Stage();
 
-            stage.setTitle("Hospital Management System | Check-Out");
+            stage.setTitle("MediTrack Management System | Check-Out");
             stage.setScene(new Scene(root));
             stage.show();
         } catch (Exception e) {
@@ -1150,7 +1150,7 @@ public class AdminMainFormController implements Initializable {
                     path = path.replace("\\", "\\\\");
                     Path transfer = Paths.get(path);
 
-                    Path copy = Paths.get("C:\\Users\\WINDOWS 10\\Documents\\NetBeansProjects\\HospitalManagementSystem\\src\\Admin_Directory\\"
+                    Path copy = Paths.get("C:\\Users\\nidha\\OneDrive\\Desktop\\MediTrack\\src\\main\\java\\controllers\\Admin_Directory\\"
                             + Data.admin_id + ".jpg");
 
                     Files.copy(transfer, copy, StandardCopyOption.REPLACE_EXISTING);

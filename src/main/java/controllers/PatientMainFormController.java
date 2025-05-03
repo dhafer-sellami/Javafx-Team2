@@ -710,7 +710,7 @@ public class PatientMainFormController implements Initializable {
 
                     Path transfer = Paths.get(path);
 
-                    Path copy = Paths.get("C:\\Users\\WINDOWS 10\\Documents\\NetBeansProjects\\HospitalManagementSystem\\src\\Directory\\"
+                    Path copy = Paths.get("C:\\Users\\nidha\\OneDrive\\Desktop\\MediTrack\\src\\main\\java\\controllers\\Directory\\"
                             + Data.patient_id + ".jpg");
 
                     String copyPath = copy.toAbsolutePath().toString();

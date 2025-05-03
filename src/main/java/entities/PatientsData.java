@@ -139,4 +139,5 @@ public class PatientsData {
     public String getStatus(){
         return status;
     }
+    public String getDescription() {return description;}
 }

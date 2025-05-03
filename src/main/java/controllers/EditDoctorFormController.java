@@ -177,7 +177,7 @@ public class EditDoctorFormController implements Initializable {
                         path = path.replace("\\", "\\\\");
                         Path transfer = Paths.get(path);
 
-                        Path copy = Paths.get("C:\\Users\\WINDOWS 10\\Documents\\NetBeansProjects\\HospitalManagementSystem\\src\\Doctor_Directory\\"
+                        Path copy = Paths.get("C:\\Users\\nidha\\OneDrive\\Desktop\\MediTrack\\src\\main\\java\\controllers\\Doctor_Directory\\"
                                 + editDoctor_doctorID.getText() + ".jpg");
 
                         Files.copy(transfer, copy, StandardCopyOption.REPLACE_EXISTING);
