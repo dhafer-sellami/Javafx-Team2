@@ -1,0 +1,172 @@
+.table-view {
+    -fx-background-color: white;
+
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 0;
+    -fx-background-insets: 0;
+    -fx-table-cell-border-color: transparent;
+    -fx-control-inner-background: white;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #16a085;
+    -fx-background-radius: 5 5 0 0;
+}
+
+.table-view .column-header,
+.table-view .filler {
+    -fx-size: 20px;
+    -fx-border-width: 0 0 1 0;
+
+    -fx-background-color: #16a085;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white; /* Texte en blanc pour le titre */
+    -fx-font-weight: bold; /* Titre en gras */
+    -fx-font-size: 14px;
+    -fx-alignment: CENTER;
+}
+
+
+
+.table-row-cell {
+    -fx-font-size: 14px;
+    -fx-padding: 5 10;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #f9f9f9;
+}
+
+.table-row-cell:even {
+    -fx-background-color: white;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: #d1f0ec;
+    -fx-text-fill: black;
+}
+
+
+
+.button-modifier {
+    -fx-background-color: yellow;
+    -fx-text-fill: black;
+    -fx-font-size: 14px;
+}
+
+
+.button-supprimer {
+    -fx-background-color: red;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+}
+.table-view .filler {
+    -fx-background-color: white; /* ou #f0f2f5 si tu veux que ça se fonde avec le fond */
+}
+
+
+.table-view .scroll-bar:horizontal {
+    -fx-opacity: 0;
+    -fx-max-height: 0;
+    -fx-pref-height: 0;
+    -fx-min-height: 0;
+}
+
+/* Cache la barre de scroll verticale */
+.table-view .scroll-bar:vertical {
+    -fx-opacity: 0;
+    -fx-max-width: 0;
+    -fx-pref-width: 0;
+    -fx-min-width: 0;
+}
+
+.navbar {
+    -fx-background-color: #2c3e50;  /* Couleur de fond de la navbar */
+    -fx-padding: 10px;
+    -fx-spacing: 15px;
+}
+
+.navbar .logo {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.navbar Hyperlink {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 5px 10px;
+    -fx-underline: false;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5px;
+}
+
+.navbar Hyperlink:hover {
+    -fx-text-fill: #f0f0f0;
+    -fx-background-color: #1abc9c;
+}
+
+
+
+
+.logo {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.pagination {
+    -fx-alignment: center;
+    -fx-spacing: 5px;
+}
+
+.pagination .control-box {
+    -fx-background-color: white;
+
+}
+
+.pagination .number-button {
+    -fx-background-color: white;
+    -fx-text-fill: #16a085;
+
+    -fx-padding: 4px 8px;
+}
+
+.pagination .number-button:hover {
+    -fx-background-color: #ddd;
+}
+
+.pagination .number-button:selected {
+    -fx-background-color: #16a085;
+    -fx-text-fill: white;
+}
+
+.pagination .left-arrow-button,
+.pagination .right-arrow-button {
+    -fx-background-color: white;
+    -fx-text-fill: #16a085;
+    -fx-padding: 4px 8px;
+    -fx-background-radius: 4;
+    -fx-border-radius: 4;
+    -fx-border-color: transparent;
+}
+
+.pagination .left-arrow-button:hover,
+.pagination .right-arrow-button:hover {
+    -fx-background-color: #ddd;
+}
+
+.pagination .left-arrow-button:armed,
+.pagination .right-arrow-button:armed {
+    -fx-background-color: #16a085;
+    -fx-text-fill: white;
+}
+
+
+
+
+
+
