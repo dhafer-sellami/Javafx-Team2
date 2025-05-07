@@ -26,6 +26,9 @@ public class RendezVousFormController {
 
     private RendezVousService service = new RendezVousService();
     private RendezVous rendezVous;
+    private int personneId;
+
+
 
     public void setRendezVous(RendezVous rdv) {
         this.rendezVous = rdv;

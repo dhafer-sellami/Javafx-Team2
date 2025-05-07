@@ -34,10 +34,11 @@ public class RendezVousService {
 
         String sql = "INSERT INTO rendezvous (date, email, num, etat) VALUES (?, ?, ?, ?)";
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
-            stmt.setDate(1, Date.valueOf(rdv.getDate()));
+            stmt.setDate(1, java.sql.Date.valueOf(rdv.getDate()));
             stmt.setString(2, rdv.getEmail());
             stmt.setString(3, rdv.getNum());
             stmt.setString(4, rdv.getEtat());
+
             int rows = stmt.executeUpdate();
             System.out.println("Lignes insérées : " + rows);
             System.out.println("Rendez-vous inséré dans la base !");
@@ -68,6 +69,7 @@ public class RendezVousService {
         }
         return list;
     }
+
 
 
     public void modifier(RendezVous rdv) {

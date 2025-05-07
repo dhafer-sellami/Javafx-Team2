@@ -12,6 +12,8 @@ public class RendezVous {
     private final StringProperty num = new SimpleStringProperty();
     private final StringProperty etat = new SimpleStringProperty();
 
+
+
     public RendezVous() {
 
     }
@@ -22,6 +24,7 @@ public class RendezVous {
         this.email.set(email);
         this.num.set(num);
         this.etat.set(etat);
+
     }
 
     public RendezVous(LocalDate date, String email, String num, String etat) {
@@ -29,7 +32,9 @@ public class RendezVous {
         this.email.set(email);
         this.num.set(num);
         this.etat.set(etat);
+
     }
+
 
 
     public int getId() { return id.get(); }
@@ -46,9 +51,12 @@ public class RendezVous {
     public void setEtat(String etat) { this.etat.set(etat); }
 
 
+
+
     public IntegerProperty idProperty() { return id; }
     public ObjectProperty<LocalDate> dateProperty() { return date; }
     public StringProperty emailProperty() { return email; }
     public StringProperty numProperty() { return num; }
     public StringProperty etatProperty() { return etat; }
 }
+
