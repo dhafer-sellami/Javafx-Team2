@@ -12,6 +12,12 @@ import java.io.IOException;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.Date;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Node;
+import javafx.scene.Scene;
+import javafx.scene.layout.BorderPane;
 
 public class RendezVousFormController {
 
@@ -22,6 +28,7 @@ public class RendezVousFormController {
     @FXML private Button btnAide;
     @FXML private TextArea txtChatBot;
     @FXML private TextField userQuestionField;
+
 
 
     private RendezVousService service = new RendezVousService();
@@ -104,6 +111,21 @@ public class RendezVousFormController {
         alert.setHeaderText(null);
         alert.setContentText(message);
         alert.showAndWait();
+    }
+    @FXML
+    private void handleOpenForm(ActionEvent event) {
+
+    }
+
+    @FXML
+    private void handleOpenTable(ActionEvent event) {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("/RendezVousTable.fxml"));
+            BorderPane mainPane = (BorderPane) ((Node) event.getSource()).getScene().getRoot();
+            mainPane.setCenter(root);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 

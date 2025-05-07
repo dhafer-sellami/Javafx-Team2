@@ -108,6 +108,20 @@
     -fx-text-fill: #f0f0f0;
     -fx-background-color: #1abc9c;
 }
+.navbar Button {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 5px 10px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5px;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.navbar Button:hover {
+    -fx-text-fill: #f0f0f0;
+    -fx-background-color: #1abc9c;
+}
 
 
 
@@ -117,6 +131,8 @@
     -fx-font-weight: bold;
     -fx-text-fill: white;
 }
+
+
 
 .pagination {
     -fx-alignment: center;

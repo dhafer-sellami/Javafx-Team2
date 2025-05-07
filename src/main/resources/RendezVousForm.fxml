@@ -32,8 +32,8 @@
             <Hyperlink text="About" styleClass="nav-link"/>
             <Hyperlink text="Doctors" styleClass="nav-link"/>
             <Hyperlink text="Book an appointment" styleClass="nav-link"/>
-            <Hyperlink text="Sign in" styleClass="nav-link"/>
-            <Hyperlink text="Sign up" styleClass="nav-link"/>
+            <Button text="Formulaire" onAction="#handleOpenForm" styleClass="nav-link"/>
+            <Button text="Table des RDV" onAction="#handleOpenTable" styleClass="nav-link"/>
         </HBox>
     </top>
 

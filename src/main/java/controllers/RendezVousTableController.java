@@ -26,6 +26,13 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.Properties;
 import java.util.stream.Collectors;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Node;
+import javafx.scene.Scene;
+import javafx.scene.layout.BorderPane;
+
 
 
 public class RendezVousTableController {
@@ -161,6 +168,21 @@ public class RendezVousTableController {
         message.setContent(multipart);
 
         Transport.send(message);
+    }
+    @FXML
+    private void handleOpenForm(ActionEvent event) {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("/views/Form.fxml"));
+            BorderPane mainPane = (BorderPane) ((Node) event.getSource()).getScene().getRoot();
+            mainPane.setCenter(root);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void handleOpenTable(ActionEvent event) {
+        // Charger Table.fxml (rester sur place ou recharger)
     }
 
     private void addActionButtons() {
