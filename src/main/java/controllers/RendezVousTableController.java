@@ -172,7 +172,7 @@ public class RendezVousTableController {
     @FXML
     private void handleOpenForm(ActionEvent event) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("/views/Form.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/RendezVousForm.fxml"));
             BorderPane mainPane = (BorderPane) ((Node) event.getSource()).getScene().getRoot();
             mainPane.setCenter(root);
         } catch (IOException e) {

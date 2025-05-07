@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controllers.HomeController"
+            stylesheets="@/table-style.css"
+            prefWidth="900" prefHeight="600">
+
+    <top>
+        <HBox spacing="15" alignment="CENTER_LEFT" styleClass="navbar">
+            <padding>
+                <Insets top="10" right="20" bottom="10" left="20"/>
+            </padding>
+
+            <ImageView fitHeight="24" fitWidth="24">
+                <image>
+                    <Image url="@/meditrack-icon.png" />
+                </image>
+            </ImageView>
+
+            <Label text="MediTrack" styleClass="logo"/>
+            <Region HBox.hgrow="ALWAYS"/>
+
+            <Button text="Formulaire" onAction="#handleOpenForm" styleClass="nav-link"/>
+            <Button text="Table des RDV" onAction="#handleOpenTable" styleClass="nav-link"/>
+        </HBox>
+    </top>
+
+    <center>
+        <AnchorPane fx:id="contentPane" />
+    </center>
+</BorderPane>
