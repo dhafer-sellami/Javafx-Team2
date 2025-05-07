@@ -1,30 +1,17 @@
 package test;
 
-import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
-
-import java.io.IOException;
-
-public class Main extends Application {
-
+public class Main {
     public static void main(String[] args) {
-        launch(args);
-    }
-
-    @Override
-    public void start(Stage primaryStage) {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Admin.fxml"));
+        // Temporarily commented out to avoid errors
+        /*
+        PersonneService ps = new PersonneService();
         try {
-            Parent root = loader.load();
-            Scene scene = new Scene(root);
-            primaryStage.setScene(scene);
-            primaryStage.setTitle("MediTrack Desktop System");
-            primaryStage.show();
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
+            ps.modifier(new Personne(1, 25, "Ben Foulen", "Foulen"));
+            System.out.println(ps.recuperer());
+        } catch (SQLException e) {
+            System.err.println(e.getMessage());
         }
+        */
+       // System.out.println("Test class - no functionality for now.");
     }
 }
