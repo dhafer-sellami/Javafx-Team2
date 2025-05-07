@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/javafx"
+            fx:controller="controllers.RendezVousTableController"
+            prefWidth="900" prefHeight="600"
+            style="-fx-background-color: #f0f2f5;"
+            stylesheets="@/table-style.css">
+
+
+    <top>
+        <HBox spacing="15" alignment="CENTER_LEFT" styleClass="navbar"> <!-- Utilisation uniquement de .navbar -->
+            <padding>
+                <Insets top="10" right="20" bottom="10" left="20"/>
+            </padding>
+
+            <ImageView fitHeight="24" fitWidth="24">
+                <image>
+                    <Image url="@design/meditrack-icon.png" />
+                </image>
+            </ImageView>
+
+            <Label text="MediTrack" styleClass="logo"/>
+
+            <Region HBox.hgrow="ALWAYS"/>
+
+            <Hyperlink text="Home" styleClass="nav-link"/>
+            <Hyperlink text="About" styleClass="nav-link"/>
+            <Hyperlink text="Doctors" styleClass="nav-link"/>
+            <Hyperlink text="Book an appointment" styleClass="nav-link"/>
+            <Hyperlink text="Sign in" styleClass="nav-link"/>
+            <Hyperlink text="Sign up" styleClass="nav-link"/>
+        </HBox>
+    </top>
+
+
+
+    <center>
+        <HBox spacing="30" alignment="CENTER" BorderPane.alignment="CENTER">
+
+
+            <ImageView fitWidth="300" fitHeight="300" preserveRatio="true">
+                <image>
+                    <Image url="@about-img.png" />
+                </image>
+            </ImageView>
+
+
+
+
+
+            <VBox alignment="CENTER" spacing="10">
+                <Label text="Liste des rendez-vous"
+                       style="-fx-font-size: 20px; -fx-text-fill: #16a085; -fx-font-weight: bold;"/>
+
+                <TextField fx:id="etatFilterField"
+                           promptText="Filtrer par nom..."
+                           layoutX="50"
+                           layoutY="50"
+
+
+                           style="-fx-border-color: #16a085; -fx-border-width: 1px; -fx-border-radius: 8px; -fx-background-radius: 8px;" />
+                <TableView fx:id="tableView"
+                           prefWidth="700"
+                           minWidth="700"
+                           maxWidth="700"
+                           prefHeight="450"
+                           style="-fx-background-color: white; -fx-border-radius: 12; -fx-background-radius: 12;">
+                    <columns>
+                        <TableColumn fx:id="etatColumn" text="NOM" prefWidth="130"/>
+                        <TableColumn fx:id="dateColumn" text="Date" prefWidth="130"/>
+                        <TableColumn fx:id="emailColumn" text="Email" prefWidth="130"/>
+                        <TableColumn fx:id="numColumn" text="Numéro" prefWidth="130"/>
+                        <TableColumn fx:id="actionColumn" text="Actions" prefWidth="180"/>
+                    </columns>
+                </TableView>
+                <Pagination fx:id="pagination" layoutX="150" layoutY="400" maxPageIndicatorCount="9" />
+
+
+
+
+            </VBox>
+
+        </HBox>
+    </center>
+
+
+</BorderPane>
+
+
+
