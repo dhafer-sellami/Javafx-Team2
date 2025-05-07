@@ -14,7 +14,7 @@ public class RendezVousService {
     public RendezVousService() {
         try {
             connection = DriverManager.getConnection(
-                    "jdbc:mysql://127.0.0.1:3306/stvv", "root", ""
+                    "jdbc:mysql://127.0.0.1:3306/3a62", "root", ""
             );
         } catch (SQLException e) {
             e.printStackTrace();

@@ -19,7 +19,7 @@
 
             <ImageView fitHeight="24" fitWidth="24">
                 <image>
-                    <Image url="@/meditrack-icon.png" />
+                    <Image url="@meditrack-icon.png" />
                 </image>
             </ImageView>
 
@@ -103,7 +103,7 @@
             <!-- Image à droite -->
             <ImageView fitWidth="300" fitHeight="300" preserveRatio="true">
                 <image>
-                    <Image url="@/book-img.png" />
+                    <Image url="@book-img.png" />
                 </image>
             </ImageView>
         </HBox>
