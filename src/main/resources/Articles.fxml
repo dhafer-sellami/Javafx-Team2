@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.util.Callback?>
+<AnchorPane prefHeight="744.0" prefWidth="1198.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ArticleController">
+    <children>
+        <BorderPane prefHeight="744.0" prefWidth="1200.0">
+            <left>
+                <AnchorPane prefHeight="744.0" prefWidth="438.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <TextField fx:id="nomArticle" layoutX="33.0" layoutY="103.0" prefHeight="30.0" prefWidth="385.0" promptText="Article Name" />
+                        <TextField fx:id="typeArticle" layoutX="33.0" layoutY="150.0" prefHeight="30.0" prefWidth="385.0" promptText="Type" />
+                        <TextField fx:id="phoneArticle" layoutX="33.0" layoutY="197.0" prefHeight="30.0" prefWidth="385.0" promptText="Phone Number" />
+                        <TextField fx:id="descriptionArticle" layoutX="33.0" layoutY="244.0" prefHeight="30.0" prefWidth="385.0" promptText="Description" />
+                        <DatePicker fx:id="dateAjouteArticle" layoutX="33.0" layoutY="291.0" prefHeight="30.0" prefWidth="385.0" promptText="Date Added" />
+                    </children>
+                </AnchorPane>
+            </left>
+            <right>
+                <AnchorPane prefHeight="797.0" prefWidth="748.0" BorderPane.alignment="CENTER" >
+                    <children>
+                        <HBox layoutX="4.0" layoutY="20.0" spacing="10">
+                            <children>
+                                <TextField fx:id="searchField" prefHeight="30.0" prefWidth="600.0" promptText="Search Articles"/>
+                                <Button fx:id="searchButton" text="Search" onAction="#filterArticles" />
+                            </children>
+                        </HBox>
+                        <TableView fx:id="tableArticle" layoutX="4.0" layoutY="61.0" prefHeight="398.0" prefWidth="741.0">
+                            <columns>
+                                <TableColumn fx:id="colIdArticle" prefWidth="48.0" text="ID" />
+                                <TableColumn fx:id="colNomArticle" prefWidth="100.0" text="Name" />
+                                <TableColumn fx:id="colTypeArticle" prefWidth="100.0" text="Type" />
+                                <TableColumn fx:id="colPhoneArticle" prefWidth="100.0" text="Phone" />
+                                <TableColumn fx:id="colDescriptionArticle" prefWidth="150.0" text="Description" />
+                                <TableColumn fx:id="colDateAjoute" prefWidth="100.0" text="Date Added" />
+                                <TableColumn fx:id="colDownload" prefWidth="100.0" text="Download PDF">
+                                </TableColumn>
+                            </columns>
+                        </TableView>
+                        <ButtonBar layoutX="110.0" layoutY="530.0" prefHeight="40.0" prefWidth="548.0">
+                            <buttons>
+                                <Button fx:id="btnDeleteArticle" mnemonicParsing="false" onAction="#deleteArticle" text="Delete" />
+                                <Button fx:id="btnUpdateArticle" mnemonicParsing="false" onAction="#updateArticle" text="Update" />
+                                <Button fx:id="btnAddArticle" mnemonicParsing="false" onAction="#addArticle" text="Add" />
+                            </buttons>
+                        </ButtonBar>
+                        <Button fx:id="btnBack" layoutX="580.0" layoutY="678.0" mnemonicParsing="false" onAction="#Commentaires" prefHeight="25.0" prefWidth="91.0" text="Commentaires" />
+                    </children>
+                </AnchorPane>
+            </right>
+        </BorderPane>
+    </children>
+</AnchorPane>
