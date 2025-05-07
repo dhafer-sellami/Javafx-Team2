@@ -140,4 +140,5 @@ public class PatientsData {
         return status;
     }
     public String getDescription() {return description;}
+    public String getDiagnosis() {return diagnosis;}
 }
