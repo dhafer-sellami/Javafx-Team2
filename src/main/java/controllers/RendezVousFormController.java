@@ -26,6 +26,8 @@ public class RendezVousFormController {
 
     private RendezVousService service = new RendezVousService();
     private RendezVous rendezVous;
+    @FXML
+    private Button saveButton;
 
     public void setRendezVous(RendezVous rdv) {
         this.rendezVous = rdv;

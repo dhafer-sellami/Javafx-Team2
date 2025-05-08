@@ -19,7 +19,7 @@
 
             <ImageView fitHeight="24" fitWidth="24">
                 <image>
-                    <Image url="@design/meditrack-icon.png" />
+                    <Image url="@meditrack-icon.png" />
                 </image>
             </ImageView>
 

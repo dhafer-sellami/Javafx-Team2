@@ -5,8 +5,14 @@ import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
 import entities.Facture;
 import entities.RendezVous;
+import jakarta.mail.*;
+import jakarta.mail.internet.InternetAddress;
+import jakarta.mail.internet.MimeBodyPart;
+import jakarta.mail.internet.MimeMessage;
+import jakarta.mail.internet.MimeMultipart;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -18,8 +24,8 @@ import javafx.stage.Stage;
 import services.FactureService;
 import services.RendezVousService;
 
-import javax.mail.*;
-import javax.mail.internet.*;
+//import javax.mail.*;
+//import javax.mail.internet.*;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.time.LocalDate;
@@ -27,6 +33,9 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Properties;
 import java.util.stream.Collectors;
+import javafx.scene.Node;
+import javafx.scene.Scene;
+import javafx.scene.layout.BorderPane;
 
 
 public class RendezVousTableController {
@@ -164,6 +173,8 @@ public class RendezVousTableController {
         Transport.send(message);
     }
 
+
+
     private void addActionButtons() {
         actionColumn.setCellFactory(col -> new TableCell<>() {
             private final Button modifierBtn = new Button("M");
@@ -267,6 +278,22 @@ public class RendezVousTableController {
                 setGraphic(empty ? null : box);
             }
         });
+    }
+    @FXML
+    private void handleOpenForm(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/RendezVousForme.fxml"));
+            Parent root = loader.load();
+            BorderPane mainPane = (BorderPane) ((Node) event.getSource()).getScene().getRoot();
+            mainPane.setCenter(root);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void handleOpenTable(ActionEvent event) {
+        // Charger Table.fxml (rester sur place ou recharger)
     }
 
     private void showAlert(String message) {
