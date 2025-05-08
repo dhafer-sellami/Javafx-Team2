@@ -11,31 +11,31 @@
             prefHeight="600.0" prefWidth="900.0"
             stylesheets="@/style.css">
 
-    <top>
-        <HBox spacing="15" alignment="CENTER_LEFT" styleClass="navbar">
-            <padding>
-                <Insets top="10" right="20" bottom="10" left="20"/>
-            </padding>
+<!--    <top>-->
+<!--        <HBox spacing="15" alignment="CENTER_LEFT" styleClass="navbar">-->
+<!--            <padding>-->
+<!--                <Insets top="10" right="20" bottom="10" left="20"/>-->
+<!--            </padding>-->
 
-            <ImageView fitHeight="24" fitWidth="24">
-                <image>
-                    <Image url="@meditrack-icon.png" />
-                </image>
-            </ImageView>
+<!--            <ImageView fitHeight="24" fitWidth="24">-->
+<!--                <image>-->
+<!--                    <Image url="@meditrack-icon.png" />-->
+<!--                </image>-->
+<!--            </ImageView>-->
 
-<!--            <Label text="MediTrack"-->
-<!--                   style="-fx-text-fill: #16a085; -fx-font-weight: bold; -fx-font-size: 16px;" />-->
+<!--&lt;!&ndash;            <Label text="MediTrack"&ndash;&gt;-->
+<!--&lt;!&ndash;                   style="-fx-text-fill: #16a085; -fx-font-weight: bold; -fx-font-size: 16px;" />&ndash;&gt;-->
 
-            <Region HBox.hgrow="ALWAYS"/>
+<!--            <Region HBox.hgrow="ALWAYS"/>-->
 
-<!--            <Hyperlink text="Home" styleClass="nav-link"/>-->
-<!--            <Hyperlink text="About" styleClass="nav-link"/>-->
-<!--            <Hyperlink text="Doctors" styleClass="nav-link"/>-->
-<!--            <Hyperlink text="Book an appointment" styleClass="nav-link"/>-->
-<!--            <Hyperlink text="Sign in" styleClass="nav-link"/>-->
-<!--            <Hyperlink text="Sign up" styleClass="nav-link"/>-->
-        </HBox>
-    </top>
+<!--&lt;!&ndash;            <Hyperlink text="Home" styleClass="nav-link"/>&ndash;&gt;-->
+<!--&lt;!&ndash;            <Hyperlink text="About" styleClass="nav-link"/>&ndash;&gt;-->
+<!--&lt;!&ndash;            <Hyperlink text="Doctors" styleClass="nav-link"/>&ndash;&gt;-->
+<!--&lt;!&ndash;            <Hyperlink text="Book an appointment" styleClass="nav-link"/>&ndash;&gt;-->
+<!--&lt;!&ndash;            <Hyperlink text="Sign in" styleClass="nav-link"/>&ndash;&gt;-->
+<!--&lt;!&ndash;            <Hyperlink text="Sign up" styleClass="nav-link"/>&ndash;&gt;-->
+<!--        </HBox>-->
+<!--    </top>-->
 
 
     <center>
