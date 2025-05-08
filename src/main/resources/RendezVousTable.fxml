@@ -24,16 +24,16 @@
                 </image>
             </ImageView>
 
-            <Label text="MediTrack" styleClass="logo"/>
+<!--            <Label text="MediTrack" styleClass="logo"/>-->
 
             <Region HBox.hgrow="ALWAYS"/>
 
-            <Hyperlink text="Home" styleClass="nav-link"/>
-            <Hyperlink text="About" styleClass="nav-link"/>
-            <Hyperlink text="Doctors" styleClass="nav-link"/>
-            <Hyperlink text="Book an appointment" styleClass="nav-link"/>
-            <Hyperlink text="Sign in" styleClass="nav-link"/>
-            <Hyperlink text="Sign up" styleClass="nav-link"/>
+<!--            <Hyperlink text="Home" styleClass="nav-link"/>-->
+<!--            <Hyperlink text="About" styleClass="nav-link"/>-->
+<!--            <Hyperlink text="Doctors" styleClass="nav-link"/>-->
+<!--            <Hyperlink text="Book an appointment" styleClass="nav-link"/>-->
+<!--            <Hyperlink text="Sign in" styleClass="nav-link"/>-->
+<!--            <Hyperlink text="Sign up" styleClass="nav-link"/>-->
         </HBox>
     </top>
 

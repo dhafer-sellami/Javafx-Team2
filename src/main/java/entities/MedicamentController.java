@@ -80,6 +80,12 @@ public class MedicamentController {
 
     private static final int ITEMS_PER_PAGE = 10;
     private ObservableList<Medicament> allMedicaments;
+    @FXML
+    private Button deleteButton;
+    @FXML
+    private Button addButton;
+    @FXML
+    private Button updateButton;
 
     @FXML
     public void openDashboard() throws IOException {

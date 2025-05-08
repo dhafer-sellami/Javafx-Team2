@@ -23,17 +23,17 @@
                 </image>
             </ImageView>
 
-            <Label text="MediTrack"
-                   style="-fx-text-fill: #16a085; -fx-font-weight: bold; -fx-font-size: 16px;" />
+<!--            <Label text="MediTrack"-->
+<!--                   style="-fx-text-fill: #16a085; -fx-font-weight: bold; -fx-font-size: 16px;" />-->
 
             <Region HBox.hgrow="ALWAYS"/>
 
-            <Hyperlink text="Home" styleClass="nav-link"/>
-            <Hyperlink text="About" styleClass="nav-link"/>
-            <Hyperlink text="Doctors" styleClass="nav-link"/>
-            <Hyperlink text="Book an appointment" styleClass="nav-link"/>
-            <Hyperlink text="Sign in" styleClass="nav-link"/>
-            <Hyperlink text="Sign up" styleClass="nav-link"/>
+<!--            <Hyperlink text="Home" styleClass="nav-link"/>-->
+<!--            <Hyperlink text="About" styleClass="nav-link"/>-->
+<!--            <Hyperlink text="Doctors" styleClass="nav-link"/>-->
+<!--            <Hyperlink text="Book an appointment" styleClass="nav-link"/>-->
+<!--            <Hyperlink text="Sign in" styleClass="nav-link"/>-->
+<!--            <Hyperlink text="Sign up" styleClass="nav-link"/>-->
         </HBox>
     </top>
 
