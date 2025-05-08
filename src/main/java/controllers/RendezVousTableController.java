@@ -98,12 +98,12 @@ public class RendezVousTableController {
         PdfWriter.getInstance(document, new FileOutputStream(outputPath));
         document.open();
 
-        Image logo = Image.getInstance(Objects.requireNonNull(getClass().getResource("/design/meditrack-icon.png")));
-
-        logo.scaleToFit(80, 80);
-        logo.setAlignment(Image.ALIGN_LEFT);
-
-        document.add(logo);
+//        Image logo = Image.getInstance(Objects.requireNonNull(getClass().getResource("/design/meditrack-icon.png")));
+//
+//        logo.scaleToFit(80, 80);
+//        logo.setAlignment(Image.ALIGN_LEFT);
+//
+//        document.add(logo);
 
 
         Paragraph title = new Paragraph("Facture MediTrack\n\n", new Font(Font.FontFamily.HELVETICA, 18, Font.BOLD));

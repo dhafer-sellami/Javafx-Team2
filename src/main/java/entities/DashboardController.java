@@ -192,7 +192,8 @@ public class DashboardController {
     
     @FXML
     public void goBack() throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/medicament.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/medicament.fxml"));
+        Parent root = loader.load();
         Scene scene = new Scene(root);
         Stage stage = (Stage) backButton.getScene().getWindow();
         stage.setScene(scene);

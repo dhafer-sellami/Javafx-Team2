@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml" fx:controller="controllers.DashboardController">
+    <left>
+        <VBox spacing="20.0" prefWidth="220.0" style="-fx-background-color: #E3F2FD; -fx-padding: 20;">
+            <Label text="🏥  MedicalApp" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #1565C0;" />
+            <Button text="👨‍⚕️ Patients" prefWidth="180" style="-fx-background-color: #BBDEFB; -fx-text-fill: #0D47A1; -fx-font-size: 14px;" />
+            <Button text="📋 Appointments" prefWidth="180" style="-fx-background-color: #BBDEFB; -fx-text-fill: #0D47A1; -fx-font-size: 14px;" />
+            <Button text="📝 Add Article" prefWidth="180" style="-fx-background-color: #BBDEFB; -fx-text-fill: #0D47A1; -fx-font-size: 14px;" onAction="#showAddArticleForm"/>
+            <Button text="🛠️ Admin" prefWidth="180" style="-fx-background-color: #C8E6C9; -fx-text-fill: #2E7D32; -fx-font-size: 14px;" onAction="#goToAdminPanel"/>
+        </VBox>
+    </left>
+
+    <center>
+        <StackPane style="-fx-background-color: #F0F8FF;">
+            <AnchorPane>
+                <!-- Add Article Form (hidden by default) -->
+                <VBox fx:id="addArticleContainer" visible="false" spacing="10" alignment="CENTER" style="-fx-padding: 20;">
+                    <Label text="Ajouter un Article" style="-fx-font-size: 20px;"/>
+                    <TextField fx:id="nomField" promptText="Nom"/>
+                    <TextField fx:id="typeField" promptText="Type"/>
+                    <TextField fx:id="phoneField" promptText="Phone Number"/>
+                    <TextArea fx:id="descriptionField" promptText="Description" prefRowCount="4"/>
+                    <DatePicker fx:id="dateAjoutePicker"/>
+                    <HBox spacing="10" alignment="CENTER">
+                        <Button text="Ajouter" onAction="#handleAddArticle" style="-fx-background-color: #BBDEFB; -fx-text-fill: #0D47A1; -fx-font-size: 14px;" />
+                        <Button text="Cancel" onAction="#goBackToDashboard" style="-fx-background-color: #FFCDD2; -fx-text-fill: #C62828; -fx-font-size: 14px;" />
+                    </HBox>
+                </VBox>
+
+                <!-- Add Comment Form (hidden by default) -->
+                <VBox fx:id="addCommentContainer" visible="false" spacing="10" alignment="CENTER" style="-fx-padding: 20;">
+                    <Label text="Ajouter un Commentaire" style="-fx-font-size: 20px;"/>
+                    <TextArea fx:id="contentComment" promptText="Content" prefRowCount="4"/>
+                    <TextField fx:id="authorComment" promptText="Author"/>
+                    <TextField fx:id="articleIdComment" promptText="Article ID"/>
+                    <DatePicker fx:id="dateComment"/>
+                    <HBox spacing="10" alignment="CENTER">
+                        <Button text="Ajouter" onAction="#addCommentaire" style="-fx-background-color: #BBDEFB; -fx-text-fill: #0D47A1; -fx-font-size: 14px;" />
+                        <Button text="Cancel" onAction="#goBackToDashboard" style="-fx-background-color: #FFCDD2; -fx-text-fill: #C62828; -fx-font-size: 14px;" />
+                    </HBox>
+                </VBox>
+            </AnchorPane>
+        </StackPane>
+    </center>
+
+    <!-- Bottom Section with the message and Hyperlink -->
+    <bottom>
+        <HBox spacing="10" alignment="CENTER" style="-fx-background-color: #BBDEFB; -fx-padding: 10;">
+            <Label text="You don't like an article? You want to add a comment?" style="-fx-font-size: 14px;"/>
+            <Hyperlink text="Click here" onAction="#showAddCommentForm" style="-fx-font-size: 14px; -fx-text-fill: #0D47A1;" />
+        </HBox>
+    </bottom>
+</BorderPane>

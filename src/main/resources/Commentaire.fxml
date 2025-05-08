@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="744.0" prefWidth="1198.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CommentaireController">
+    <children>
+        <BorderPane prefHeight="744.0" prefWidth="1200.0">
+            <left>
+                <AnchorPane prefHeight="744.0" prefWidth="438.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <TextArea fx:id="contentComment" layoutX="33.0" layoutY="103.0" prefHeight="100.0" prefWidth="385.0" promptText="Content" />
+                        <TextField fx:id="authorComment" layoutX="33.0" layoutY="220.0" prefHeight="30.0" prefWidth="385.0" promptText="Author" />
+                        <TextField fx:id="articleIdComment" layoutX="33.0" layoutY="267.0" prefHeight="30.0" prefWidth="385.0" promptText="Article ID" />
+                        <DatePicker fx:id="dateComment" layoutX="33.0" layoutY="314.0" prefHeight="30.0" prefWidth="385.0" promptText="Date" />
+                    </children>
+                </AnchorPane>
+            </left>
+            <right>
+                <AnchorPane prefHeight="797.0" prefWidth="748.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <TableView fx:id="tableCommentaire" layoutX="4.0" layoutY="61.0" prefHeight="398.0" prefWidth="741.0">
+                            <columns>
+                                <TableColumn fx:id="colIdCommentaire" prefWidth="48.0" text="ID" />
+                                <TableColumn fx:id="colContentCommentaire" prefWidth="250.0" text="Content" />
+                                <TableColumn fx:id="colAuthorCommentaire" prefWidth="100.0" text="Author" />
+                                <TableColumn fx:id="colDateCommentaire" prefWidth="150.0" text="Date" />
+                                <TableColumn fx:id="colArticleIdCommentaire" prefWidth="100.0" text="Article ID" />
+                            </columns>
+                        </TableView>
+                        <ButtonBar layoutX="110.0" layoutY="530.0" prefHeight="40.0" prefWidth="548.0">
+                            <buttons>
+                                <Button fx:id="btnDeleteCommentaire" mnemonicParsing="false" onAction="#deleteCommentaire" text="Delete" />
+                                <Button fx:id="btnUpdateCommentaire" mnemonicParsing="false" onAction="#updateCommentaire" text="Update" />
+                                <Button fx:id="btnAddCommentaire" mnemonicParsing="false" onAction="#addCommentaire" text="Add" />
+                            </buttons>
+                        </ButtonBar>
+                        <Button fx:id="btnBack" layoutX="580.0" layoutY="678.0" mnemonicParsing="false" onAction="#back" prefHeight="25.0" prefWidth="91.0" text="Back" />
+                    </children>
+                </AnchorPane>
+            </right>
+        </BorderPane>
+    </children>
+</AnchorPane>

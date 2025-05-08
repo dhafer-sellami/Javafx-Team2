@@ -12,7 +12,7 @@ public class MyDatabase {
     private Connection cnx;
     private static MyDatabase instance;
 
-    private MyDatabase(){
+    private MyDatabase() {
         try {
             cnx = DriverManager.getConnection(url, user, password);
             System.out.println("Connexion établie");
@@ -21,8 +21,8 @@ public class MyDatabase {
         }
     }
 
-    public static MyDatabase getInstance(){
-        if(instance == null)
+    public static MyDatabase getInstance() {
+        if (instance == null)
             instance = new MyDatabase();
         return instance;
     }
@@ -41,3 +41,30 @@ public class MyDatabase {
         return cnx;
     }
 }
+
+//
+//    // Récupérer la connexion
+//    public Connection getCon() {
+//        try {
+//            if (connection == null || connection.isClosed()) {
+//                connection = DriverManager.getConnection(URL, USER, PASS); // Rouvrir la connexion si elle est fermée
+//            }
+//        } catch (SQLException e) {
+//            System.err.println("Failed to reconnect: " + e.getMessage());
+//        }
+//        return connection;
+//    }
+//
+//    // Méthode pour fermer la connexion
+//    public void closeConnection() {
+//        try {
+//            if (connection != null && !connection.isClosed()) {
+//                connection.close();
+//                System.out.println("Connection closed");
+//            }
+//        } catch (SQLException e) {
+//            System.err.println("Failed to close connection: " + e.getMessage());
+//        }
+//>>>>>>> origin/cheridy-harb
+//    }
+//}
