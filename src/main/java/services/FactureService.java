@@ -21,7 +21,7 @@ public class FactureService {
     }
 
     public void ajouterFacture(Facture facture) {
-        String sql = "INSERT INTO facture (prix, idrdv) VALUES (?, ?)";
+        String sql = "INSERT INTO facture (prix, idrdv_id) VALUES (?, ?)";
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
             stmt.setDouble(1, facture.getPrix());
             stmt.setInt(2, facture.getIdRdv());
@@ -32,7 +32,7 @@ public class FactureService {
         }
     }
     public boolean existeFacturePourRendezVous(int idRdv) {
-        String sql = "SELECT COUNT(*) FROM facture WHERE idrdv = ?";
+        String sql = "SELECT COUNT(*) FROM facture WHERE idrdv_id = ?";
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
             stmt.setInt(1, idRdv);
             ResultSet rs = stmt.executeQuery();
@@ -46,7 +46,7 @@ public class FactureService {
         return false;
     }
     public Facture getByRendezVousId(int idRdv) {
-        String sql = "SELECT * FROM facture WHERE idrdv = ?";
+        String sql = "SELECT * FROM facture WHERE idrdv_id= ?";
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
             stmt.setInt(1, idRdv);
             ResultSet rs = stmt.executeQuery();
@@ -54,7 +54,7 @@ public class FactureService {
                 return new Facture(
                         rs.getInt("id"),
                         rs.getDouble("prix"),
-                        rs.getInt("idrdv")
+                        rs.getInt("idrdv_id")
                 );
             }
         } catch (SQLException e) {
@@ -74,7 +74,7 @@ public class FactureService {
                 factures.add(new Facture(
                         rs.getInt("id"),
                         rs.getDouble("prix"),
-                        rs.getInt("idrdv")
+                        rs.getInt("idrdv_id")
                 ));
             }
         } catch (SQLException e) {

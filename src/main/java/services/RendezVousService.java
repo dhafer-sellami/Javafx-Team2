@@ -32,7 +32,7 @@ public class RendezVousService {
             return;
         }
 
-        String sql = "INSERT INTO rendezvous (date, email, num, etat) VALUES (?, ?, ?, ?)";
+        String sql = "INSERT INTO rendez_vous (date, email, num, etat) VALUES (?, ?, ?, ?)";
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
             stmt.setDate(1, java.sql.Date.valueOf(rdv.getDate()));
             stmt.setString(2, rdv.getEmail());
@@ -51,7 +51,7 @@ public class RendezVousService {
 
     public List<RendezVous> getAll() {
         List<RendezVous> list = new ArrayList<>();
-        String sql = "SELECT * FROM rendezvous";
+        String sql = "SELECT * FROM  rendez_vous";
         try (Statement stmt = connection.createStatement()) {
             ResultSet rs = stmt.executeQuery(sql);
             while (rs.next()) {
@@ -73,7 +73,7 @@ public class RendezVousService {
 
 
     public void modifier(RendezVous rdv) {
-        String sql = "UPDATE rendezvous SET date = ?, email = ?, num = ?, etat = ? WHERE id = ?";
+        String sql = "UPDATE rendez_vous SET date = ?, email = ?, num = ?, etat = ? WHERE id = ?";
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
             stmt.setDate(1, Date.valueOf(rdv.getDate()));
             stmt.setString(2, rdv.getEmail());
@@ -91,7 +91,7 @@ public class RendezVousService {
 
 
     public void supprimer(int id) {
-        String sql = "DELETE FROM rendezvous WHERE id = ?";
+        String sql = "DELETE FROM  rendez_vous WHERE id = ?";
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
             stmt.setInt(1, id);
             int rows = stmt.executeUpdate();
@@ -106,7 +106,7 @@ public class RendezVousService {
 
     public int getCountByDate(LocalDate date) {
         int count = 0;
-        String sql = "SELECT COUNT(*) FROM rendezvous WHERE DATE(date) = ?";
+        String sql = "SELECT COUNT(*) FROM  rendez_vous WHERE DATE(date) = ?";
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
             stmt.setDate(1, Date.valueOf(date));
             ResultSet rs = stmt.executeQuery();
