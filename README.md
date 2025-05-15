@@ -4,9 +4,9 @@ Hospital Management
 This project , runs on maven with javafx plugin .
 ## Features ## 
 has module : user , prendre un rendez vous , medicaments ..
-Frontend ### 
+### Frontend 
 we used scene builder for building interfaces.
-Backend 
+### Backend 
 ## Directory Structure ## 
 cummon database 
 
